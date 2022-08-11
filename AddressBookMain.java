@@ -3,13 +3,13 @@ package com.adressbook;
 
 import java.util.Scanner;
 
-public class AddressBook {
-	private Contact contact;
+public class AddressBookMain {
+	private ContactPojo contact;
 	private static Scanner scanner = new Scanner(System.in);
-	static AddressBook addressBook;
+	static AddressBookMain addressBook;
 
 	// add new Contact -uc2
-	public Contact addContact() {
+	public ContactPojo addContact() {
 		System.out.print(" Enter id  : ");
 		int id = scanner.nextInt();
 
@@ -28,12 +28,12 @@ public class AddressBook {
 		System.out.print(" Enter Phone Number  : ");
 		String phoneNumber = scanner.next();
 
-		contact = new Contact(id, firstName, lastName, address, email, phoneNumber);
+		contact = new ContactPojo(id, firstName, lastName, address, email, phoneNumber);
 		return contact;
 	}
 
 	// edit exiting contact -uc3
-	private Contact editContact(String fName) {
+	private ContactPojo editContact(String fName) {
 		if (contact == null) {
 			System.out.print(" Address book is ");
 			return contact;
@@ -67,7 +67,7 @@ public class AddressBook {
 	}
 
 	// delete existing Contact -uc4
-	public Contact deleteContact(String fName) {
+	public ContactPojo deleteContact(String fName) {
 		if (contact == null) {
 			System.out.print(" Address book is ");
 			return contact;
@@ -91,7 +91,7 @@ public class AddressBook {
 	public static void main(String[] args) {
 		System.out.println("-----------Welcome to Address Book---------");
 
-		addressBook = new AddressBook();
+		addressBook = new AddressBookMain();
 		String exit = "n";
 		while (exit != "y") {
 			System.out.println("\n Enter 1 to add new Contact ");

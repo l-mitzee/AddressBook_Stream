@@ -1,6 +1,6 @@
 package com.adressbook;
 
-public class Contact {
+public class ContactPojo {
 
 	private int id;
 	private String firstName;
@@ -8,10 +8,10 @@ public class Contact {
 	private String address;
 	private String email;
 	private String phoneNumber;
-	public Contact() {
+	public ContactPojo() {
 		super();
 	}
-	public Contact(int id, String firstName, String lastName, String address, String email, String phoneNumber) {
+	public ContactPojo(int id, String firstName, String lastName, String address, String email, String phoneNumber) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
